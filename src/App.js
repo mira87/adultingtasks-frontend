@@ -26,8 +26,8 @@ class App extends Component {
   }
   //cats
   componentDidMount() {
+    // Axios.get('http://adultingappbackend.herokuapp.com/api/categories/').then(res =>
     Axios.get('http://adultingappbackend.herokuapp.com/api/categories/').then(res =>
-
       this.setState({
         categories: res.data
       })
