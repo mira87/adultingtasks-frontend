@@ -94,7 +94,7 @@ export class OneTask extends Component {
     enterTaskTitle = (e) => {
         e.preventDefault()
         this.setState({
-            title: e.target.value
+            title: this.state.title
 
         })
         // console.log(this.state.title)
@@ -117,8 +117,8 @@ export class OneTask extends Component {
 
         this.setState({
 
-            taskpic: this.state.taskpic
-
+            // taskpic: this.state.taskpic
+            taskpic: e.target.value
         })
         // console.log(this.state.summary)
     }
@@ -173,14 +173,17 @@ export class OneTask extends Component {
             details: details,
             category: parseInt(category),
             taskpic: taskpic
-        }).then(res => {
-            console.log(res.data);
-            console.log(title)
-            console.log('hiiiii')
+        },
+            {
+                headers: { 'Content-Type': 'application/json' }
+            }).then(res => {
+                console.log(res.data);
+                console.log(title)
+                console.log('hiiiii')
 
 
 
-        })
+            }).catch((err) => console.log(err.data));
     }
 
 
