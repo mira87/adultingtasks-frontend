@@ -275,16 +275,16 @@ export class OneCategory extends Component {
         // ))
 
         let allTasks = myTasks.map(eachofem => {
-            // console.log(eachofem)
+            console.log(eachofem)
             return (
-
+                // {`/tasks/${task.title}`}
                 <div>
-                    < div className="col-4" >
+                    <Link to={`http://adultingtasks.herokuapp.com/${eachofem.title}`}>   < div className="col-4" >
                         <h6>{eachofem.title}</h6>
 
                         <img className="img-fluid img-thumbnail" src={eachofem.taskpic} />
                     </div >
-
+                    </Link>
                 </div >
             )
         })
