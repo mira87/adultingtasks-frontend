@@ -279,7 +279,7 @@ export class OneCategory extends Component {
             return (
                 // {`/tasks/${task.title}`}
                 <div>
-                    <Link to={`http://adultingtasks.herokuapp.com/${eachofem.title}`}>   < div className="col-4" >
+                    <Link to={`/tasks/${eachofem.title}`}>   < div className="col-4" >
                         <h6>{eachofem.title}</h6>
 
                         <img className="img-fluid img-thumbnail" src={eachofem.taskpic} />
