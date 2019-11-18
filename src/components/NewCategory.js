@@ -8,22 +8,18 @@ class NewCategory extends Component {
                 title: e.target.value
             }
         })
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
 
     submitCategory = (e) => {
-        // console.log(this.state.categories.title)
         e.preventDefault()
         const newCat = this.state.categories.title
         Axios.post('http://adultingappbackend.herokuapp.com/api/categories/', { title: newCat }).then(res => {
-            console.log(res.data);
-            console.log(newCat)
-            console.log('hiiiii')
+            // console.log(res.data);
+            // console.log(newCat)
+            // console.log('hiiiii')
         })
     }
-
-
-
 
 
     render() {

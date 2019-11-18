@@ -7,17 +7,9 @@ class HeroArea extends Component {
                 <video style={{
                     width: '100%'
                 }} playsInline="playsInline" autoPlay="autoPlay" muted="muted" loop="loop">
-
                     <source src="../../video/headervideo.mp4" type="video/mp4" />
-
                 </video>
-
-
-
             </div>
-
-
-
         )
     }
 }

@@ -26,7 +26,6 @@ class App extends Component {
   }
   //cats
   componentDidMount() {
-    // Axios.get('http://adultingappbackend.herokuapp.com/api/categories/').then(res =>
     Axios.get('http://adultingappbackend.herokuapp.com/api/categories/').then(res =>
       this.setState({
         categories: res.data
@@ -48,26 +47,6 @@ class App extends Component {
 
 
   }
-
-
-  //adulting
-
-
-
-  // componentDidMount() {
-  //   Axios
-  //     .get('http://adultingappbackend.herokuapp.com/api/adultingtasks')
-  //     .then(res => {
-  //       this.setState({
-  //         tasks: res.data
-  //       })
-
-  //     })
-
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // }
 
 
   render() {
