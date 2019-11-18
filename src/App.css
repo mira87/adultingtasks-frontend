@@ -28,10 +28,9 @@
 
 .breathe {
   background-image: url("photo-1549633169-e65ac0cd7d58.jpeg");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   min-height: 500px;
 }
 
@@ -66,6 +65,15 @@ p {
 @media (min-width: 1200px) {
   .para {
     background-image: url("pexels-photo-2055692.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+  }
+
+  .breathe {
+    background-image: url("photo-1549633169-e65ac0cd7d58.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
