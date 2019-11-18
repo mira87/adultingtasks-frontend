@@ -4,7 +4,6 @@ export class Breathe extends Component {
     render() {
         return (
             <div className="breathe">
-
             </div>
         )
     }

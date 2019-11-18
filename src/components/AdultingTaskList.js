@@ -10,20 +10,15 @@ class AdultingTaskList extends Component {
 
         ]
     }
-
-
     render() {
         return (
             this.props.tasks.map(task => (
                 <div>
                     <Link to={`/tasks/${task.title}`}><p>{task.title}</p>
                     </Link>
-
                 </div>
             ))
         )
-
-
     }
 }
 

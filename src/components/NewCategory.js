@@ -8,7 +8,6 @@ class NewCategory extends Component {
                 title: e.target.value
             }
         })
-        // console.log(e.target.value)
     }
 
     submitCategory = (e) => {
@@ -21,7 +20,6 @@ class NewCategory extends Component {
         })
     }
 
-
     render() {
         return (
             <form onSubmit={this.submitCategory} >
@@ -30,14 +28,10 @@ class NewCategory extends Component {
                     <input onChange={this.enterCategory} placeholder="Create a New Category" type="text" className="form-control"></input>
                     <br></br>
                     <input type="submit" className="btn btn-danger" />
-
-
-
                 </div>
             </form>
         )
     }
 }
-
 
 export default NewCategory;

@@ -20,7 +20,6 @@ class NewTask extends Component {
             title: e.target.value
 
         })
-        // console.log(this.state.title)
     }
 
     enterTaskSummary = (e) => {
@@ -31,9 +30,7 @@ class NewTask extends Component {
             summary: e.target.value
 
         })
-        // console.log(this.state.summary)
     }
-
 
     enterTaskpic = (e) => {
         e.preventDefault()
@@ -43,7 +40,6 @@ class NewTask extends Component {
             taskpic: e.target.value
 
         })
-        // console.log(this.state.summary)
     }
 
     enterTaskDetails = (e) => {
@@ -54,10 +50,7 @@ class NewTask extends Component {
             details: e.target.value
 
         })
-        // console.log(this.state.details)
     }
-
-
 
     enterCategory = (e) => {
         e.preventDefault()
@@ -67,29 +60,17 @@ class NewTask extends Component {
             category: e.target.value
 
         })
-        // console.log(this.state.category)
     }
 
 
-
-
-
-
     submitTasks = (e) => {
-        // console.log(this.state.categories.title)
         e.preventDefault()
         const title = this.state.title
         const details = this.state.details
         const category = this.state.category
         const summary = this.state.summary
         const taskpic = this.state.taskpic
-        console.log({
-            title: title,
-            summary: summary,
-            details: details,
-            category: parseInt(category),
-            taskpic: taskpic
-        })
+
         Axios.post('http://adultingappbackend.herokuapp.com/api/adultingtasks/', {
             title: title,
             summary: summary,
@@ -97,39 +78,15 @@ class NewTask extends Component {
             category: parseInt(category),
             taskpic: taskpic
         }).then(res => {
-            console.log(res.data);
-            console.log(title)
-            console.log('hiiiii')
 
-
-
-
-
-
-            // this.setState({
-            //     tasks: {
-            //         title: title,
-            //         summary: summary,
-            //         details: details,
-            //         category: category,
-            //         taskpic: taskpic
-
-            //     }
-            // })
         }).catch(err => {
             console.log(err.response)
         })
 
     }
 
-
-
-
-
     render() {
-        // console.log(this.props.categories)
         let thisCategory = this.props.categories.map(category => {
-            console.log(category)
             return (<option value={category.id}>{category.title}</option>)
 
         })
@@ -170,7 +127,3 @@ class NewTask extends Component {
 
 
 export default NewTask;
-
-// summary = models.CharField(max_length = 500, default='Enter Summary')
-// details = models.TextField(default='Enter Details')
-// taskpic

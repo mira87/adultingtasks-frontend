@@ -4,7 +4,6 @@ export class Shopping extends Component {
     render() {
         return (
             <div className="para">
-
             </div>
         )
     }

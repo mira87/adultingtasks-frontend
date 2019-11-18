@@ -5,27 +5,15 @@ import NewTask from './NewTask';
 
 
 export class CategoryList extends Component {
-
-
     render() {
-
-
-
         return (
             this.props.categories.map(category => (
                 <div>
                     <Link to={`/categories/${category.title}`}>{category.title}</Link>
                 </div>
-
-
             )
-
             )
-
         )
-
-
-
     }
 }
 
