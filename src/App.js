@@ -124,7 +124,7 @@ class App extends Component {
             <div className="tasklist row">
 
               <OneCategory categories={this.state.categories} task={this.state.tasks} match={routerProps.match} /></div>} />
-          <Route path="/tasks/:title" exact={true} render={routerProps => <OneTask match={routerProps.match} />} />
+          <Route path="/tasks/:title" exact={true} render={routerProps => <OneTask match={routerProps.match} categories={this.state.categories} />} />
           <Footer />
 
 
