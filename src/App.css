@@ -30,7 +30,7 @@
   background-image: url("photo-1549633169-e65ac0cd7d58.jpeg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   min-height: 500px;
 }
 
