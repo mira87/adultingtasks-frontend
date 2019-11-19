@@ -12,7 +12,6 @@ export class OneTask extends Component {
     }
 
     deleteTask = () => {
-        console.log(this.state.id)
         axios
             .delete(`http://adultingappbackend.herokuapp.com/api/adultingtasks/${this.state.id}`)
             .then(res => {
@@ -29,32 +28,20 @@ export class OneTask extends Component {
 
     updateTask = () => {
         let myForm;
-        // console.log(this.state.id)
         return (
             myForm = document.querySelector('.updateForm').style.display = 'block'
-
-            // display: 'block',
-
         )
     }
 
-
-
     componentDidMount() {
-        // const { match: { params } } = this.props;
-        console.log(this.props.match.params.title)
+        // console.log(this.props.match.params.title)
         axios
-            // .get(`http://localhost:8000/adultingtasks/${params.title}`)
             .get(`http://adultingappbackend.herokuapp.com/api/adultingtasks/`)
             .then(res => {
                 let mytask = res.data.filter(data => (
                     // data.title == 'Balancing A checkbook'
                     data.title == this.props.match.params.title
                 ))
-
-                console.log(mytask)
-                console.log(mytask[0].title)
-                console.log(mytask[0])
 
                 this.setState({
 
@@ -65,8 +52,6 @@ export class OneTask extends Component {
                     category: mytask[0].category,
                     id: mytask[0].id
 
-
-
                 });
             })
             .catch(error => {
@@ -74,19 +59,12 @@ export class OneTask extends Component {
             });
     }
 
-
-
-
-
-
-
     enterTaskTitle = (e) => {
         e.preventDefault()
         this.setState({
             title: e.target.value
 
         })
-        console.log(this.state.title)
     }
 
     enterTaskSummary = (e) => {
@@ -97,9 +75,7 @@ export class OneTask extends Component {
             summary: e.target.value
 
         })
-        console.log(this.state.summary)
     }
-
 
     enterTaskpic = (e) => {
         e.preventDefault()
@@ -108,7 +84,6 @@ export class OneTask extends Component {
 
             taskpic: e.target.value
         })
-        console.log(this.state.summary)
     }
 
     enterTaskDetails = (e) => {
@@ -119,7 +94,6 @@ export class OneTask extends Component {
             details: e.target.value
 
         })
-        console.log(this.state.details)
     }
 
 
@@ -132,29 +106,16 @@ export class OneTask extends Component {
             category: e.target.value
 
         })
-        console.log(this.state.category)
     }
 
-
-
-
-
-
     submitTasks = (e) => {
-        // //     // console.log(this.state.categories.title)
         e.preventDefault()
         const title = this.state.title
         const details = this.state.details
         const category = this.state.category
         const summary = this.state.summary
         const taskpic = this.state.taskpic
-        console.log({
-            title: title,
-            summary: summary,
-            details: details,
-            category: parseInt(category),
-            taskpic: taskpic
-        })
+
         axios.put(`https://adultingappbackend.herokuapp.com/api/adultingtasks/${this.state.id}/`, {
             title: title,
             summary: summary,
@@ -166,26 +127,13 @@ export class OneTask extends Component {
                 headers: { 'Content-Type': 'application/json' }
             }).then(res => {
                 console.log(res.data);
-                console.log(title)
-                console.log('hiiiii')
-
-
-
             }).catch((err) => console.log(err));
     }
 
 
     render() {
-        // console.log(this.state)
-        console.log(this.state.title)
 
-        // console.log(this.state[0].task)
-
-        // this.state.task.map(task => (
-        //     console.log(task.title)
-        // ))
         let thisCategory = this.props.categories.map(category => {
-            console.log(category)
             return (<option value={category.id}>{category.title}</option>)
 
         })
