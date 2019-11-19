@@ -9,18 +9,13 @@ class Menu extends Component {
                     <Link to="/"><h1>Adulting Tasks </h1>
                     </Link>
                 </div>
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tasks</a>
-                    </li>
+                {/* <ul class="nav justify-content-end">
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sign In</a>
                     </li>
 
-                </ul>
+                </ul> */}
 
             </div>
         )
