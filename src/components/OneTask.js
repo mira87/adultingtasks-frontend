@@ -79,22 +79,11 @@ export class OneTask extends Component {
 
 
 
-    // constructor(props) {
-    //     super(props);
 
-    //     this.state = {
-    //         title: '',
-    //         taskpic: '',
-    //         summary: '',
-    //         details: '',
-    //         category: 1
-    //     }
-
-    // }
     enterTaskTitle = (e) => {
         e.preventDefault()
         this.setState({
-            title: this.target.value
+            title: e.target.value
 
         })
         console.log(this.state.title)
